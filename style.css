@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: #ffffff;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* padding-left: 80px; */
+    width:auto;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color:white;
+    color: black;
+    /* position: fixed; */
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    height: 58px;
+    min-width: auto;
+    max-width: auto;
+    max-height: auto;
+    min-height: auto;
+}
+h3{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    min-width: fit-content;
+    max-width: fit-content;
+    max-height: fit-content;
+    min-height: fit-content;
+}
+.main-nav {
+    justify-content: space-around;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+/*           second nav bar           */
+.items{
+    background-color: #e9edf0;
+    max-width: auto;
+    /* margin-inline: auto; */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 4px #bbd0e2;
+    /* position: fixed; */
+    top: 60px;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
+.items ul{
+    gap: 16px;
+}
+.items.active {
+    color: var(--accent-color);
+}
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+.hover-link.link {
+    color: red;
+}
+.hover-link:hover {
+    color: var(--secondary-text-color);
+    transform: translateY(-4px);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--accent-color);
+    text-underline-position: below;
+}
+.nav-item.active {
+    color: var(--accent-color);
+    text-decoration: underline 3px;
+}
+/*    news  cards     */
+
+main {
+    padding-block: 20px;
+    margin-top: 40px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-5px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+
+
+.name{
+    font-family: sans-serif;
+    font-weight: 200;
+}
+img{
+    /* border: ; */
+	width: auto;
+	height: 80px;
+    margin-top: -25px;
+}
+#search{
+    text-align: center;
+    color: #183b56;
+}
+
+
+/*           weather              */
+.weathers{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 0vh; */
+	height: 55vh;
+	/* background-color:rgba(242, 237, 228, 0.5); */
+    border: 2px solid black;
+    border-left:none ;
+    border-right:none ;
+}
+
+.weather{
+    width: 100%;
+    /* height: 5vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: unset;
+}
+.row{
+    margin-bottom: -10px;
+	margin-right: 50px;
+    width:auto;
+    height: 100px;
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+.weathers #heading{
+    /* row-gap: 101px; */
+    margin-top: -150px;
+    width:auto;
+}
+#search{
+/*  	width:900px;*/
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    width:300px;*/
+    height:40px;
+    border-radius: 20px;
+    border-style: none;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px grey;
+    font-size: 20px;
+    padding: 15px;
+    outline: none;
+    color: black;
+}
+/*                      footer                      */
+
+footer {
+    
+    display: -ms-flexbox;
+    background-color: #53575a;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e9edf0;
+    margin-bottom: 5px;
+}
+
+.fotLogo{
+    margin-top: 15px;
+    color:rgb(248, 248, 249);
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 200;
+    font-size: 25px;
+}
+.items_{
+    /* background-color: black; */
+    max-width: auto;
+    margin-inline: auto;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 4px #bbd0e2;
+    /* position: fixed; */
+    z-index: 99;
+    left: 0;
+    right: 0;
+    height: 30px ;
+    
+}
+.ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+} 
+.trend{
+   text-align: center;
+   /* border: #183b56 2px solid; */
+   font-size: 20px;
+   color:red ;
+   text-decoration: wavy;
+   background-color: white;
+ }
+h4{
+    font-size:20px;
+    color:rgb(61, 65, 61);
+}
+
+#preloaders{
+    background: black url(load.gif) no-repeat center center;
+    background-size: 10% ;
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index: 100;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+    /* Safari*/
+    /* @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }  */
