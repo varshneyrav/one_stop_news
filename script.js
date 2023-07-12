@@ -1,4 +1,4 @@
-
+const API_KEY1 = "97dc581a8f2c4c59b99176f6c7e18fc5";
 window.addEventListener("load", () => fetchNews("cricket"));
 
 function reload() {
@@ -6,12 +6,12 @@ function reload() {
 }
 
 async function fetchNews() {
-    // const url_ = `https://newsapi.org/v2/everything?q=`;  
-    const res = await fetch(`https://api.mediastack.com/v1/news
-    ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
+    const url_ = `https://newsapi.org/v2/everything?q=`;  
+    // const res = await fetch(`https://api.mediastack.com/v1/news
+    // ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
     const data = await res.json();
-    console.log(data);
-    // bindData(data.articles);
+    // console.log(data);
+    bindData(data.articles);
 }
 
 function bindData(articles) {
