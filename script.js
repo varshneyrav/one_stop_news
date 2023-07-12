@@ -7,7 +7,7 @@ function reload() {
 
 async function fetchNews() {
     // const url_ = `https://newsapi.org/v2/everything?q=`;  
-    const res = await fetch(`http://api.mediastack.com/v1/news
+    const res = await fetch(`https://api.mediastack.com/v1/news
     ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
     const data = await res.json();
     console.log(data);
