@@ -1,5 +1,3 @@
-const API_KEY1 = "97dc581a8f2c4c59b99176f6c7e18fc5";
-// const weather1 = document.querySelector("#template-news-card");
 
 window.addEventListener("load", () => fetchNews("cricket"));
 
@@ -7,11 +5,13 @@ function reload() {
     window.location.reload();
 }
 
-async function fetchNews(query) {
-    const url_ = `https://newsapi.org/v2/everything?q=`; 
-    const res = await fetch(`${url_}${query}&apiKey=${API_KEY1}`);
+async function fetchNews() {
+    // const url_ = `https://newsapi.org/v2/everything?q=`;  
+    const res = await fetch(`http://api.mediastack.com/v1/news
+    ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
     const data = await res.json();
-    bindData(data.articles);
+    console.log(data);
+    // bindData(data.articles);
 }
 
 function bindData(articles) {
