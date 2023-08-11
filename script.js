@@ -7,7 +7,7 @@ function reload() {
     window.location.reload();
 }
 
-async function fetchNews() {
+async function fetchNews(query) {
 
 	let apiEndpoint = `https://gnews.io/api/v4/search?q=${query}&apikey=628881c4bc3a9d2c6892dc928783469c`;
     const res = await fetch(apiEndpoint);
