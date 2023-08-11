@@ -19,6 +19,24 @@ body {
     background-color: #ffffff;
 }
 
+.ons_loader {
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    inset: 0;
+}
+.ons_loader img {
+    height: unset;
+}
+.display_grid {
+    display: grid;
+}
+.display_none {
+    display: none;
+}
+
 p {
     font-family: "Roboto", sans-serif;
     color: var(--secondary-text-color);
