@@ -1,17 +1,6 @@
 const API_KEY1 = "97dc581a8f2c4c59b99176f6c7e18fc5";
 const url_ = "https://newsapi.org/v2/everything?q=";
-function getNews() {
-		  	console.log('getNews...');
-		    let fetchRes = fetch("https://newsapi.org/v2/everything?q=india&from=2023-07-20&sortBy=publishedAt&apiKey=1d3a0eefa97b499d8fbc4ee93eeb40b7");
-		    fetchRes
-		    	.then(res => res.json())
-		    	.then(response => {
-		            console.log(response)
-		    })
 
-		  }
-
-		  getNews();
 window.addEventListener("load", () => fetchNews("cricket"));
 
 function reload() {
@@ -19,6 +8,14 @@ function reload() {
 }
 
 async function fetchNews() {
+
+	let apiEndpoint = `https://gnews.io/api/v4/search?q=${query}&apikey=628881c4bc3a9d2c6892dc928783469c`;
+    const res = await fetch(apiEndpoint);
+    const data = await res.json();
+    console.log('response', data);
+	return;
+
+	
     //const url_ = `https://newsapi.org/v2/everything?q=`;  
     // const res = await fetch(`https://api.mediastack.com/v1/news
     // ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
