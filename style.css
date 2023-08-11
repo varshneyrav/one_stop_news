@@ -29,6 +29,7 @@ body {
 }
 .ons_loader img {
     height: unset;
+    width: 300px;
 }
 .display_grid {
     display: grid;
