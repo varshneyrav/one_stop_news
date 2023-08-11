@@ -182,6 +182,16 @@ main {
     transform: translateY(-5px);
 }
 
+.card-header {
+    height: 19rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #e0e0e0;
+}
+
 .card-header img {
     width: 100%;
     height: 180px;
