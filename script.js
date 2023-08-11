@@ -1,28 +1,32 @@
-const API_KEY1 = "97dc581a8f2c4c59b99176f6c7e18fc5";
-const url_ = "https://newsapi.org/v2/everything?q=";
+const API_KEY1 = "628881c4bc3a9d2c6892dc928783469c";
+const url_ = "https://gnews.io/api/v4/search?q=";
 
-window.addEventListener("load", () => fetchNews("cricket"));
+window.addEventListener("load", () => fetchNews("India"));
 
 function reload() {
     window.location.reload();
 }
 
 async function fetchNews(query) {
-
-	let apiEndpoint = `https://gnews.io/api/v4/search?q=${query}&apikey=628881c4bc3a9d2c6892dc928783469c`;
+    // let apiEndpoint = './news.json';
+    let apiEndpoint = `${url_}${query}&apikey=${API_KEY1}`;
     const res = await fetch(apiEndpoint);
     const data = await res.json();
     console.log('response', data);
-	return;
-
-	
-    // //const url_ = `https://newsapi.org/v2/everything?q=`;  
-    // // const res = await fetch(`https://api.mediastack.com/v1/news
-    // // ? access_key = 97742efe07b5a8d5071cffb80417e4ae`);
-    // const res = await fetch(`${url_}${query}&apiKey=${API_KEY1}`);
-    // const data = await res.json();
-    // // console.log(data);
-    // bindData(data.articles);
+    if(data && data.articles && data.articles.length ){
+	// below code for make unique records
+        // var mapNews = new Map();
+        // for (let singleNews of data.data) {
+        //     mapNews.set(singleNews["title"], singleNews);
+        // }
+        // var iteratorValues = mapNews.values();
+        // var uniqueRecords = [...iteratorValues];
+        // console.log('uniqueData', uniqueRecords);
+        bindData(data.articles);
+    } else {
+        alert(`Opps! ${keyWord} news are not available!`)
+    }
+    
 }
 
 function bindData(articles) {
@@ -32,7 +36,7 @@ function bindData(articles) {
     cardsContainer.innerHTML = "";
 
     articles.forEach((article) => {
-        if (!article.urlToImage) return;
+        // if (!article.image) return;
         const cardClone = newsCardTemplate.content.cloneNode(true);
         fillDataInCard(cardClone, article);
         cardsContainer.appendChild(cardClone);
@@ -45,7 +49,7 @@ function fillDataInCard(cardClone, article) {
     const newsSource = cardClone.querySelector("#news-source");
     const newsDesc = cardClone.querySelector("#news-desc");
 
-    newsImg.src = article.urlToImage;
+    newsImg.src = article.image;
     newsTitle.innerHTML = article.title;
     newsDesc.innerHTML = article.description;
 
