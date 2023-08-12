@@ -81,11 +81,12 @@ function onNavItemClick(id) {
 
 const searchButton = document.getElementById("search-button");
 const searchText = document.getElementById("search-text");
+const mobileSearchText = document.getElementById("search-input-mobile");
 
-searchButton.addEventListener("click", () => {
-    const query = searchText.value;
+function onNewsSearch(source) {
+    let query = (source === 'mobile') ? mobileSearchText.value : searchText.value;
     if (!query) return;
     fetchNews(query);
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
-});
+}

@@ -25,7 +25,7 @@
                 <h3 class="name">ONE STOP NEWS</h3>
                 <div class="search-bar flex">
                     <input id="search-text" type="text" class="news-input" placeholder="e.g. India">
-                    <button id="search-button" class="search-button">Search</button>
+                    <button id="search-button" class="search-button" onclick="onNewsSearch('fullscreen')">Search</button>
                 </div>
         </div>
     </nav>
@@ -84,8 +84,8 @@
     </div> -->
     <div class="small_screen_search_row">
         <div class="search-bar none flex">
-            <input id="search-text" type="text" class="news-input" placeholder="e.g. India">
-            <button id="search-button" class="search-button">Search</button>
+            <input id="search-input-mobile" type="text" class="news-input" placeholder="e.g. India">
+            <button id="search-button" class="search-button" onclick="onNewsSearch('mobile')">Search</button>
         </div>
     </div>
     <main>
