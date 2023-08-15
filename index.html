@@ -10,15 +10,6 @@
     <!--     <script src="script.js" type="text/javascript"></script> -->
     <title> One Stop | News</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9V715SGTPG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9V715SGTPG');
-</script>
 </head>
 <body>
     <div id="preloaders">
@@ -149,7 +140,7 @@
         var ampm = x.getHours() >= 12 ? ' PM' : ' AM';
 
         var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getFullYear();
-        x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+        x1 = x1 + " \n " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
         document.getElementById('ct5').innerHTML = x1;
         display_c5();
     }
