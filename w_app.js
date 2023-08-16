@@ -44,8 +44,7 @@ const getweather = async(city)=>{
 const showweather = (data)=>{
     console.log(data)
     if(data.cod == 404){
-        weather.innerHTML=`<h2>city not found
-        status 404 shown...</h2>`
+        weather.innerHTML=`<h2 id="h2">city not found </h2>`
     }
     if(data.cod == 400){
         weather.innerHTML=`<h4>Status 400 (no content)...</h4>`
