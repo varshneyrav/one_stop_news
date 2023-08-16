@@ -162,7 +162,7 @@ nav {
 }
 
 .hover-link {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .hover-link.link {
@@ -171,7 +171,7 @@ nav {
 
 .hover-link:hover {
     color: var(--secondary-text-color);
-    transform: translateY(-4px);
+    /* transform: translateY(-1px); */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--accent-color);
     text-underline-position: below;
