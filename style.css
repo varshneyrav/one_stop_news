@@ -559,6 +559,9 @@ h4 {
         gap: 1rem;
         
     }
+    .search-bar{
+        margin-left: 45px;
+    }
 }
 
 .cards-container{
