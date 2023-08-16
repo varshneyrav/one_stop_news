@@ -574,7 +574,8 @@ h4 {
         
     }
     #search{
-        margin-left: 55px;
+        margin-left: auto;
+    width: -webkit-fill-available;
     }
 }
 
