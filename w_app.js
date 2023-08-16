@@ -54,7 +54,7 @@ const showweather = (data)=>{
     <div class="imgg">
             <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="img">
     </div>
-    <div>
+    <div class="h3">
             <h1> ${data.main.temp}℃</h1> 
             <h3> Feels like ${data.main.feels_like} ℃  </h3>
             <h4> ${data.weather[0].main}</h4>

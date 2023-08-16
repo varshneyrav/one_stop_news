@@ -81,10 +81,22 @@ nav {
     right: 0;
     align-items: center;
 }
-h3 {
+.h3 h1{
+    font-size: 20px;
+    margin-left: -24px;
+}
+.imgg img{
+    height: 150px;
+    width: 150px;
+    margin-left: -24px;
+}
+.h3 h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-   
+    font-size: 18px;
+    margin-left: -24px;
+}
+.h3 h4{
+    margin-left: -24px;
 }
 .main-nav {
     justify-content: space-around;
@@ -282,10 +294,12 @@ img {
 .modal-header{
     background-color: #e0e0e0;
 }
-
+.modal-title{
+    margin-left: auto;
+}
 #search {
-    /*  	width:900px;*/
-    margin-left: 25%;
+
+    margin-left: 109px;
     width: auto;
     display: flex;
     justify-content: center;
@@ -559,8 +573,8 @@ h4 {
         gap: 1rem;
         
     }
-    .search-bar{
-        margin-left: 45px;
+    #search{
+        margin-left: 55px;
     }
 }
 
