@@ -9,14 +9,15 @@ window.addEventListener("load", () => getweather("Agra"));
 const getweather = async(city)=>{
     weather.innerHTML=`<style>
     .loader {
-      border: 20px solid #f3f3f3;
+      border: 10px solid #f3f3f3;
       border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 100px;
-      height: 100px;
+      border-top: 10px solid #3498db;
+      width: 60px;
+      height: 60px;
       -webkit-animation: spin 2s linear infinite; /* Safari */
       animation: spin 2s linear infinite;
-
+      margin-left:200px;
+      margin-top:20px;
     }
   
     /* Safari */
@@ -44,7 +45,7 @@ const getweather = async(city)=>{
 const showweather = (data)=>{
     console.log(data)
     if(data.cod == 404){
-        weather.innerHTML=`<h2 id="h2">city not found </h2>`
+        weather.innerHTML=`<h2 id="h2">city not found... </h2>`
     }
     if(data.cod == 400){
         weather.innerHTML=`<h4>Status 400 (no content)...</h4>`
