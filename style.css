@@ -505,7 +505,6 @@ footer{
 }
 @media screen and (max-width : 820px) {
     .main-nav {
-        /* font-family: Arial; */
         flex-direction: row;
         margin: 3px;
         justify-items: space-between;
@@ -517,7 +516,6 @@ footer{
 
     .main-nav img {
         display: flex;
-    
     }
 
     span {
@@ -546,12 +544,10 @@ footer{
     .news-input {
         font-size: 15px;
         width: fit-content;
-
     }
 
     .navbar {
         font-size: 1.3rem;
-
     }
 
     .items {
@@ -619,7 +615,6 @@ footer{
     cursor: pointer;
 }
 .w_logo{
-outline: ;
     height: 40px;
     color: #f2f6f8;
 }
