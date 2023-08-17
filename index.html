@@ -30,7 +30,7 @@
     </script>
 </head>
 
-<body>
+<body>    <i font-size="20px" class='fas fa-cloud-sun'></i>
     <div id="preloaders">
     </div>
 
@@ -68,38 +68,6 @@
                     Education</li>
                 <li class="hover-link nav-item" id="National stocks" onclick="onNavItemClick('National stocks')">Stocks
                 </li>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Weather
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div>
-                                    <form>
-                                        <div>
-
-                                            <input type="search" id="search" placeholder="eg. Agra " />
-                                        </div>
-
-                                    </form>
-                                    <div class="row" id="weather">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </ul>
         </div>
     </div>
@@ -144,13 +112,13 @@
             <div class="footerTop">
                 <div class="contact us">
                     <h5>Contact Us</h5>
-                    <form class="cont">
-                        <h2><strong>We value your feedback, go ahead and say it all.We will take all <br> Accolades &
-                                <br>Brickbats and try our best to improve!</strong></h2>
+                    <form action="contact.php" method="post" class="cont">
+                        <h2><strong>We value your feedback, go ahead and say it all.We will take all Accolades &
+                                Brickbats and try our best to improve!</strong></h2>
                         <div class="id">
-                            <input type="text" placeholder="Email" name="email">
+                            <input type="email" placeholder="Email" name="email">
                         </div>
-                        <textarea cols="30" rows="5" placeholder="Feedback"></textarea>
+                        <textarea cols="30" rows="5" placeholder="Feedback" name="feedback"></textarea>
                         <br>
                         <div class="sub">
                             <input type="submit" value="submit">
@@ -164,7 +132,7 @@
                     <h3>Customer Care</h3>
                     <p>For any customer care services for AGRA UP, reach out to Ravi Varshney</p>
                     <p>
-                        <a href="mailto:avi.varshney@onestopnews.com">
+                        <a href="mailto:ravi.varshney@onestopnews.com">
                             <strong>ravi.varshney@onestopnews.com</strong>
                         </a>
                     </p>
@@ -206,7 +174,40 @@
     <!-- <script src="load.js"></script> -->
     <!-- <script src="w_app.js"></script>
 <script src="script.js"></script> -->
+<div class="weather_logo"><button type="button" id="weatherlogo" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <!-- <i style='font-size:24px' class='fas'>&#xf6c4;</i> -->
+    <!-- <i class='fas fa-cloud-sun' style='font-size:24px'>&#xf740;</i>-->
+    <img src="cloudy.png" alt="img"  style='color:red'class="w_logo">
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <form>
+                        <div>
 
+                            <input type="search" id="search" placeholder="eg. Agra " />
+                        </div>
+
+                    </form>
+                    <div class="row" id="weather">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div></div>
 </body>
 <script>
     var loading = document.getElementById("preloaders");

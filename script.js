@@ -1,5 +1,5 @@
-const API_KEY1 = "628881c4bc3a9d2c6892dc928783469c";
-// const API_KEY1 = "4ca2748c39c15c160959ebf252224d66";
+// const API_KEY1 = "628881c4bc3a9d2c6892dc928783469c";
+const API_KEY1 = "4ca2748c39c15c160959ebf252224d66";
 const url_ = "https://gnews.io/api/v4/search?q=";
 
 window.addEventListener("load", () => fetchNews("Breaking news"));
@@ -13,8 +13,8 @@ let app_loader = document.getElementById('ons_loader');
 async function fetchNews(query) {
     app_loader.classList.remove("display_none");
     app_loader.classList.add("display_grid");
-    // let apiEndpoint = './news.json';
-    let apiEndpoint = `${url_}${query.trim()}&apikey=${API_KEY1}`;
+    let apiEndpoint = './news.json';
+    // let apiEndpoint = `${url_}${query.trim()}&apikey=${API_KEY1}`;
     const res = await fetch(apiEndpoint);
     const data = await res.json();
     console.log('response', data);

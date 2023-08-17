@@ -53,13 +53,9 @@ a:-webkit-any-link {
     font-weight: bold;
 }
 
-/* .paraTxt a strong
-{
-    color: b;
-} */
 .container form h2 {
     color: whitesmoke;
-    font-size: 10px;
+    font-size: 14px;
     justify-content: center;
 }
 
@@ -109,11 +105,28 @@ form button {
     background: hsl(0, 5%, 79%);
     padding: 10px 0;
     width: 10%;
-
-
 }
 
 @media screen and (max-width : 820px) {
+
+    .id input {
+        width: 250px;
+    }
+
+    .sub input {
+        width: 250px;
+    }
+
+    .contact h5 {
+        margin-left: 290px;
+    }
+
+    form textarea {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width : 420px) {
 
     .id input {
         width: 250px;
