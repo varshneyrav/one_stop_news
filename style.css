@@ -28,6 +28,7 @@ span{
     background-color: rgba(255, 255, 255, 0.96);
     position: fixed;
     inset: 0;
+    z-index:1;
 }
 
 .ons_loader img {
@@ -159,6 +160,7 @@ nav {
 
 .nav-links ul {
     gap: 16px;
+    margin-bottom:0 ;
 }
 
 .hover-link {
@@ -171,8 +173,6 @@ nav {
 
 .hover-link:hover {
     color: var(--secondary-text-color);
-    /* transform: translateY(-1px); */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--accent-color);
     text-underline-position: below;
 }
@@ -357,6 +357,7 @@ footer {
     align-items: center;
     list-style: none;
     gap: 30px;
+    margin-bottom:0 ;
 }
 
 .trend {
@@ -495,7 +496,7 @@ footer{
 }
 .contact h5{
     color: #e0e0e0;
-    margin-left: 386px;
+   text-align: center;
     margin-top: 3%;
 }
 .copyright{
@@ -504,7 +505,7 @@ footer{
 }
 @media screen and (max-width : 820px) {
     .main-nav {
-        font-family: Arial;
+        /* font-family: Arial; */
         flex-direction: row;
         margin: 3px;
         justify-items: space-between;
@@ -603,6 +604,7 @@ footer{
     }
 }
 #weatherlogo {
+    border: none;
     background: rgb(30, 30, 43);
     height: 70px;
     width: 70px;
@@ -617,7 +619,7 @@ footer{
     cursor: pointer;
 }
 .w_logo{
-    width:120%;
-    height: 90%;
+outline: ;
+    height: 40px;
     color: #f2f6f8;
 }

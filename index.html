@@ -177,12 +177,12 @@
 <div class="weather_logo"><button type="button" id="weatherlogo" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     <!-- <i style='font-size:24px' class='fas'>&#xf6c4;</i> -->
     <!-- <i class='fas fa-cloud-sun' style='font-size:24px'>&#xf740;</i>-->
-    <img src="cloudy.png" alt="img"  style='color:red'class="w_logo">
+    <img src="cloudy.png" alt="img" class="w_logo">
 </button>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog weather_dia">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
@@ -193,10 +193,9 @@
                 <div>
                     <form>
                         <div>
-
                             <input type="search" id="search" placeholder="eg. Agra " />
                         </div>
-
+                        <!-- <button type="submit" value="show">show</button> -->
                     </form>
                     <div class="row" id="weather">
                     </div>
