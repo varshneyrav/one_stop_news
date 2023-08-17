@@ -13,8 +13,8 @@ let app_loader = document.getElementById('ons_loader');
 async function fetchNews(query) {
     app_loader.classList.remove("display_none");
     app_loader.classList.add("display_grid");
-    // let apiEndpoint = './news.json';
-    let apiEndpoint = `${url_}${query.trim()}&apikey=${API_KEY1}`;
+    let apiEndpoint = './news.json';
+    // let apiEndpoint = `${url_}${query.trim()}&apikey=${API_KEY1}`;
     const res = await fetch(apiEndpoint);
     const data = await res.json();
     console.log('response', data);

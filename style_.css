@@ -1,0 +1,148 @@
+.paraTxt {
+    padding: 15px 5px 10px;
+}
+
+.paraTxt {
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "lato", sans-serif;
+    text-align: center;
+}
+
+.paraTxt h3 {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.st{
+    color: rgb(187, 100, 100);
+}
+a:hover{
+ color: blue;   
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
+
+a:-webkit-any-link {
+    color: webkit-link;
+    cursor: pointer;
+}
+
+.paraTxt p {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* .paraTxt a strong
+{
+    color: b;
+} */
+.container form h2 {
+    color: whitesmoke;
+    font-size: 10px;
+    justify-content: center;
+}
+
+form h1 {
+    position: relative;
+    color: #00b1cd;
+    padding: 10px 0;
+}
+
+form .id {
+    position: relative;
+}
+
+.id i {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-10%);
+    margin-right: 2%;
+}
+
+form input {
+    width: 345px;
+    height: 50px;
+    margin: 4px 0;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    padding: 0 15PX;
+    font-size: 15px;
+    padding-right: 45px;
+    margin-right: 2%;
+}
+
+form textarea {
+    padding: 5px 10px;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    width: 345px;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    background: hsl(0, 5%, 79%);
+    padding: 10px 0;
+    width: 10%;
+
+
+}
+
+@media screen and (max-width : 820px) {
+
+    .id input {
+        width: 250px;
+    }
+
+    .sub input {
+        width: 250px;
+    }
+
+    .contact h5 {
+        margin-left: 125px;
+    }
+
+    form textarea {
+        width: 250px;
+    }
+}
+
+footer {
+    margin: 0;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr {
+    background-color: aliceblue;
+    height: 2.5px;
+}
