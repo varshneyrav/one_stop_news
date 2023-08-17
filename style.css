@@ -28,7 +28,7 @@ span{
     background-color: rgba(255, 255, 255, 0.96);
     position: fixed;
     inset: 0;
-    z-index:1;
+    z-index:2;
 }
 
 .ons_loader img {
