@@ -33,6 +33,7 @@ async function fetchNews(query) {
     }
     
 }
+// ravi ravi
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
@@ -70,7 +71,7 @@ function fillDataInCard(cardClone, article) {
         window.open(article.url, "_blank");
     });
 }
-
+// ravi ravi
 let curSelectedNav = null;
 function onNavItemClick(id) {
     fetchNews(id);

@@ -42,6 +42,7 @@ const getweather = async(city)=>{
     const data = await response.json()
     return showweather(data);
 }
+// ravi ravi
 const showweather = (data)=>{
     console.log(data)
     if(data.cod == 404){
@@ -67,3 +68,4 @@ form.addEventListener(
         event.preventDefault()
     }
 )
+// ravi ravi

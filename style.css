@@ -569,6 +569,7 @@ footer{
         padding: 0;
         box-sizing: border-box;
     }
+    /* ravi ravi */
     .items ul {
         list-style: none;
         margin-block-start: 1em;
@@ -584,7 +585,7 @@ footer{
         
         justify-content: center;
         gap: 1rem;
-        
+        /* ravi ravi */
     }
     #search{
         margin-left: auto;
