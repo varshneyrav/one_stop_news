@@ -1,4 +1,4 @@
-const API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
+const API_KEY = `5ca811255efe381ffdc73ca39e5ab2c7`
 const form = document.querySelector(".weather_dia form")
 const search = document.querySelector("#search")
 const weather = document.querySelector("#weather")
