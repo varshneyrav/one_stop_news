@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="origin" name="referrer">
+    <link rel="icon" type="image/x-icon" href="./images/fav.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--     <script src="script.js" type="text/javascript"></script> -->
+    <title> One Stop | News</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1TSGWQCL4B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1TSGWQCL4B');
+    </script>
+</head>
+
+<body>    <i font-size="20px" class='fas fa-cloud-sun'></i>
+    <div id="preloaders">
+    </div>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./images/logo.png" alt="company logo">
+            </a>
+
+            <body onload=display_ct();>
+                <span id='ct5'></span>
+                <h3 class="name">ONE STOP NEWS</h3>
+                <div class="search-bar flex">
+                    <input data-toggle="tooltip" title="Search news" id="search-text" type="search" class="news-input" placeholder="e.g. India">
+                    <button id="search-button" class="search-button"
+                        onclick="onNewsSearch('fullscreen')">Search</button>
+                </div>
+        </div>
+    </nav>
+    <!--            second nav           -->
+    <div class="items">
+        <div class="nav-links">
+            <ul class="flex">
+                <li data-toggle="tooltip" title="Latest news" class="hover-link nav-item" id="Latest News" onclick="onNavItemClick('Latest News')">Latest News
+                </li>
+                <li data-toggle="tooltip" title="Technology" class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                <li data-toggle="tooltip" title="Business" class="hover-link nav-item" id="Business" onclick="onNavItemClick('Business')">Business</li>
+                <li data-toggle="tooltip" title="Cricket" class="hover-link nav-item" id="Cricket" onclick="onNavItemClick('Cricket')">Cricket
+                </li>
+                <li data-toggle="tooltip" title="Politics" class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                <li data-toggle="tooltip" title="World" class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                <li data-toggle="tooltip" title="Entertainment" class="hover-link nav-item" id="Entertainment" onclick="onNavItemClick('Entertainment')">
+                    Entertainment</li>
+                <li data-toggle="tooltip" title="Education" class="hover-link nav-item" id="Indian Education" onclick="onNavItemClick('Indian Education')">
+                    Education</li>
+                <li data-toggle="tooltip" title="Stocks" class="hover-link nav-item" id="National stocks" onclick="onNavItemClick('National stocks')">Stocks
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="weathers" ravi ravi>
+        <form>
+            <div class="row" id="heading">
+                <pre class="trend">[ Weather news ]</pre>
+                <input type="search" id="search" placeholder="eg. Agra " />
+            </div>
+
+        </form>
+        <div class="row" id="weather">
+        </div>
+    </div> -->
+    <div class="small_screen_search_row">
+        <div class="search-bar none flex">
+            <input id="search-input-mobile" type="search" class="news-input" placeholder="e.g. India">
+            <button id="search-button" class="search-button" onclick="onNewsSearch('mobile')">Search</button>
+        </div>
+    </div>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h2 id="news-title">This is the Title</h2>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                    saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+    <!-- <div id="footer">copyright (c)</div> -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footerTop">
+                <div class="contact us">
+                    <h5>Contact Us</h5>
+<!--               <form action="mailto:varshneyravi49@gmail.com" method="post" enctype="text/plain" class="cont">
+                    <h2><strong>We value your feedback. Go ahead and say it all. We welcome both accolades and brickbats!</strong></h2>
+                    
+                    <div class="id">
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    
+                    <textarea cols="30" rows="5" placeholder="Your Feedback" name="feedback" required></textarea>
+                    <br>
+                    
+                    <div class="sub">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form> -->
+<form action="https://formsubmit.co/varshneyravi491@gmail.com" method="POST" class="cont">
+  <h2><strong>We value your feedback. Go ahead and say it all. We welcome both accolades and brickbats!</strong></h2>
+  
+  <div class="id">
+      <input type="email" placeholder="Email" name="email" required>
+  </div>
+  
+  <textarea cols="30" rows="5" placeholder="Your Feedback" name="feedback" required></textarea>
+  <br>
+  
+  <div class="sub">
+      <input type="submit" value="Submit">
+  </div>
+</form>
+
+                </div>
+            </div>
+        </div>
+             <hr class="hr">   
+        <div class="paraTxt">
+                    <h3>Customer Care</h3>
+                    <p>For any customer care services for AGRA UP, reach out to Ravi Varshney</p>
+                    <p>
+                        <a href="mailto:ravi.varshney@onestopnews.com">
+                            <strong>ravi.varshney@onestopnews.com</strong>
+                        </a>
+                    </p>
+                  
+                    <div class-="paraTxt">
+                        <p>
+                            For placing ads in One Stop News, please contact us on Email or toll free:
+                        </p>
+                        <p>
+                            <strong class="st">18001061800</strong>
+                        </p>
+                    </div>
+                   
+    </footer>
+    <div class="copyright"> Copyright © 2023 OSN. The OSN is not responsible for the content of external
+        sites. All Right Reserved </div>
+</div>
+    <div class="ons_loader" id="ons_loader">
+        <img src="./images/logo.png" />
+    </div>
+
+    <!-- <script src="load.js"></script> -->
+    <!-- <script src="w_app.js"></script>
+<script src="script.js"></script> -->
+<div class="weather_logo"><button type="button" id="weatherlogo" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <!-- <i style='font-size:24px' class='fas'>&#xf6c4;</i> -->
+    <!-- <i class='fas fa-cloud-sun' style='font-size:24px'>&#xf740;</i>-->
+    <img src="cloudy.png" alt="img" class="w_logo">
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog weather_dia">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <form>
+                        <div>
+                            <input type="search" id="search" placeholder="eg. Agra " />
+                        </div>
+                        <!-- <button type="submit" value="show">show</button> -->
+                    </form>
+                    <div class="row" id="weather">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+</body>
+<script>
+    var loading = document.getElementById("preloaders");
+    window.addEventListener("load", function () {
+        <!-- loading.style.animationDelay="2s"; -->
+        loading.style.display = "none";
+    })
+</script>
+<script type="text/javascript">
+    function display_ct5() {
+        var x = new Date()
+        var ampm = x.getHours() >= 12 ? ' PM' : ' AM';
+
+        var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getFullYear();
+        x1 = x1 + " \n " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+        document.getElementById('ct5').innerHTML = x1;
+        display_c5();
+    }
+    <!-- ravi ravi -->
+    function display_c5() {
+        var refresh = 1000; // Refresh rate in milli seconds
+        mytime = setTimeout('display_ct5()', refresh)
+    }
+    display_c5()
+</script>
+<script src="script.js" type="text/javascript"></script>
+<script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+    })</script>
+<script src="w_app.js" type="text/javascript"></script>
+<!-- ravi ravi -->
+</html>
